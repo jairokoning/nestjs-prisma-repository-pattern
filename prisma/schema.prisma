@@ -20,3 +20,11 @@ model User {
 
   @@map("users")
 }
+
+model Animal {
+  id       String @id @default(uuid())
+  name     String
+  category String
+
+  @@map("animal")
+}
