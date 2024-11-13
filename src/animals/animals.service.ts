@@ -8,6 +8,7 @@ export class AnimalsService {
     private readonly animalsRepository: AnimalsRepository,
   ) {}
 
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   async createUser(data: any) {
     return this.animalsRepository.create(data);
   }

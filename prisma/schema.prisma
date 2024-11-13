@@ -26,5 +26,13 @@ model Animal {
   name     String
   category String
 
-  @@map("animal")
+  @@map("animals")
+}
+
+model Car {
+  id    String @id @default(uuid())
+  name  String
+  color String
+
+  @@map("cars")
 }
