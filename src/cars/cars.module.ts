@@ -3,13 +3,14 @@ import { CarsController } from './cars.controller';
 import { CarsService } from './cars.service';
 import { CarsPrismaRepository } from './cars.prisma-repository';
 import { PrismaService } from 'src/prisma/prisma.service';
+import { CarsRepository } from './cars.repository';
 
 @Module({
   controllers: [CarsController],
   providers: [
     CarsService,
     {
-      provide: 'CarsRepository',
+      provide: CarsRepository,
       useClass: CarsPrismaRepository,
     },
     PrismaService,

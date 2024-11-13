@@ -36,3 +36,10 @@ model Car {
 
   @@map("cars")
 }
+
+model Fruit {
+  id   String @id @default(uuid())
+  name String
+
+  @@map("fruits")
+}
